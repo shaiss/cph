@@ -1,0 +1,54 @@
+This is a Rails 3.0 app.
+
+It uses git as it's repository management system. (as you already know
+of course), and it's hosted on heroku.
+
+Monitoring
+  monitor.us is used for alerts... emails to: cphadmin@charlestownplayhouse.org
+  user: cphadmin@charlestownplayhouse.org
+  pass: zCC8^u4
+
+
+Basic architecture:
+  The site is a single page driven by client side jQuery.  When the user
+  arrives at the site, all of the content is downloaded, and navigation
+  happens via links bound to some js.
+
+  Each 'page' is a separate view under app/views/cph named '_something_content'.
+  You'll notice that each of those pages is a <div> with an id of
+  'something_content', and has the class 'content'  These are very important,
+  as they let jquery know what to show and hide.  Links to these sections are
+  local links (#something) with the '_content' removed.  Note also, that links
+  that aren't in the navigation drop downs, need to have the class 'local_link'
+  in order for jquery to properly bind to it.  If it's a new menu item, the
+  class isn't necessary on the link level, but the dropdown div _does_ need to
+  have the 'menu_button' class... again, so jquery can bind to those links.
+
+  home.html.erb renders all of the content pages (though it's not dynamic), and
+  is essentially the only page that we serve.
+
+  You can link to an individual 'page' as you normally would, as the link is
+  still a valid uri
+
+  So, as an example:
+
+  the "Welcome" page is located:
+    app/views/cph/_welcome_content.html.erb
+
+  in the view, the containing div is labeled:
+    <div id="welcome_content" class="content">
+
+  and in home.html.erb we have it rendered:
+    <%= render "welcome_content" %>
+
+  The dropdown menu has the entry: (note the valid uri)
+    <a href="#welcome"><li>Welcome</li></a>
+
+  Any links in the content would be like so:
+    Go to the <a href"#welcome" class="local_link">Welcome Page</a>
+
+  The actual rails app is very thin.  Originally there were plans to setup a
+  parent portal, but that never materialized... hence the postgres DB setup.
+  It's not necessary at all.  There are no models.  The only _real_ code is in
+  the cph_controller.  All that stuff just calculates dates and ages and such,
+  so bio information doesn't need to get updated every year.

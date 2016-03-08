@@ -1,0 +1,3 @@
+<%= image_tag "drive_around_safe_logo.png", :alt => "drive around safe" %>
+  <a href="#drivearound" class="local_link">Pave It Forward-- Support the Drive Around Safe and Sound Initiative</a>
+  <%= image_tag "drive_around_safe_logo.png", :alt => "drive around safe", :class => 'right' %>

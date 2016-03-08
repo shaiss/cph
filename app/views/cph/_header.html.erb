@@ -1,0 +1,71 @@
+<div id="header_container">
+  <%= image_tag "header.jpg" %>
+  <div id="button_bar">
+    <div id="about_us_dd" class="menu_button">
+      <div class="menu_shade menu_shade_first">
+          <a href="#welcome"><li>Welcome</li></a>
+          <a href="#mission_statement"><li>Mission Statement</li></a>
+          <a href="#about_our_school"><li>About Our School</li></a>
+          <a href="#history"><li>History</li></a>
+          <a href="#cooperative"><li>What is a Cooperative?</li></a>
+          <a href="#family_involvement"><li>Family Involvement</li></a>
+          <a href="/files/spring_newsletter_2014.pdf"><li class="last_menu_li">Newsletter</li></a>
+      </div>
+    </div>
+    <div id="our_program_dd" class="menu_button">
+      <div class="menu_shade">
+          <a href="#philosophy"><li>Educational Philosophy</li></a>
+          <a href="#curriculum"><li>Our Curriculum</li></a>
+          <a href="#classes"><li>Our Classes</li></a>
+          <a href="#staff"><li>Our Staff</li></a>
+          <a href="/files/Calendar.pdf"><li>School Calendar</li></a>
+          <a href="#faq"><li class="last_menu_li">Frequently Asked Questions</li></a>
+      </div>
+    </div>
+    <div id="enrollment_dd" class="menu_button">
+      <div class="menu_shade">
+          <a href="#enrollment_overview"><li>Enrollment Overview</li></a>
+          <a href="/files/CharlestownPlayhouse_Application.pdf"><li>Application Form</li></a>
+          <a href="#tuition"><li class="last_menu_li">Tuition</li></a>
+      </div>
+    </div>
+    <div id="support_cph_dd" class="menu_button">
+      <div class="menu_shade">
+          <a href="#donations"><li>Donations</li></a>
+          <a href="#fundraising"><li>Fundraising</li></a>
+          <a href="#merchandise"><li>Merchandise</li></a>
+          <a href="#drivearound"><li class="last_menu_li">Drive Around Safe and Sound</li></a>
+      </div>
+    </div>
+    <div id="charlestown_sale_dd" class="menu_button">
+      <div class="menu_shade">
+          <a href="http://www.cphsale.com" class="external_link"><li>About Charlestown Sale</li></a>
+          <%#
+          <a href="#about_cph_sale"><li>About Charlestown Sale</li></a>
+          <a href="#sale_calendar"><li>Calendar</li></a>
+          <a href="#consignment"><li>Consignment Info</li></a>
+          <a href="#directions"><li>Directions</li></a> %>
+          <a href="#salelist"><li>Email List</li></a>
+          <a href="/files/Spring2016flyer.pdf"><li class="last_menu_li">Spring 2016 Flyer</li></a>
+      </div>
+    </div>
+    <a href="#contact"><div id="contact_us_dd" class="menu_button"></div></a>
+    <%# <a href="#login"><div id="parent_login_dd" class="menu_button"></div></a> %>
+    <a href="http://www.cpleague.org" class="external_link"><div id="parent_login_dd" class="menu_button"></div></a>
+  </div>
+  <div id="banner_box">
+    <%= image_tag @image, :id => "banner_on" %>
+    <%= image_tag @image, :id => "banner_on_deck" %>
+  </div>
+
+  <!-- <div style="background-color:#993030;color:#000000;padding:20px;">
+    There will be no school Nov 27th due to the weather.
+  </div> -->
+</div>
+
+<div class="drive_around_header">
+  <%= image_tag "just-give-logo.png", :alt => "Just Give" %>
+  <a href="https://www.justgive.org" class="external_link">Just Give</a>
+  <%= image_tag "just-give-logo.png", :alt => "Just Give", :class => 'right' %>
+</div>
+

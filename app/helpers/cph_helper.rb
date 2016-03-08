@@ -1,0 +1,2 @@
+module CphHelper
+end
